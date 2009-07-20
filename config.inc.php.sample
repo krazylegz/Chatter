@@ -1,0 +1,10 @@
+<?php
+
+$db = "";
+$dbuser = "";
+$dbpass = "";
+$dbhost = "localhost";
+$title = "Chatter";
+$secondarytitle = "Change this Line!"
+
+?>
