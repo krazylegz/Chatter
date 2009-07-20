@@ -8,4 +8,8 @@ MySQL
 
 You will find a MySQL Database schema in chatter.sql
 
+Includes code from:
+Emastic CSS Framework (http://code.google.com/p/emastic/)
+JQuery (http://jquery.com/):wq
+
 You can see a live version at: http://wikicha.com/chat/
