@@ -2,4 +2,10 @@ Chatter is an AJAX based chat box. It does not currently require registration,
 but it supports listing logged in users, and avatars.
 This code started as a quick hack, and has not progressed much beyond this. Expect serious ugliness or spaghetti code.
 
+Requirements:
+PHP 5
+MySQL
+
+You will find a MySQL Database schema in chatter.sql
+
 You can see a live version at: http://wikicha.com/chat/
