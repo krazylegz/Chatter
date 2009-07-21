@@ -31,18 +31,20 @@ if (strlen($_POST['username']) && !strlen($_COOKIE['username'])) {
 	$test = mysql_query($query);
 	echo "Username " . $_POST['username'];
 } 
+print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"); 
 ?>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>wikiCHAt</title>
-	<META http-equiv="refresh" content="600,URL=http://wikicha.com/chat/">
+	<meta http-equiv="refresh" content="600,URL=http://wikicha.com/chat/"/>
 
-    <link  href="/chat/css/reset.css" rel="stylesheet" type="text/css">
-    <link  href="/chat/css/grid.css" rel="stylesheet" type="text/css">
-    <link  href="/chat/css/type.css" rel="stylesheet"  type="text/css">
-    <link rel="stylesheet" href="/chat/css/plugins/gadgets.css" type="text/css" media="screen, projection">
-    <!--[if IE]><link  href="css/ie.css" type="text/css" rel="stylesheet"><![endif]-->
-    <style>
+    <link href="/chat/css/reset.css" rel="stylesheet" type="text/css"/>
+    <link  href="/chat/css/grid.css" rel="stylesheet" type="text/css"/>
+    <link  href="/chat/css/type.css" rel="stylesheet"  type="text/css"/>
+    <link rel="stylesheet" href="/chat/css/plugins/gadgets.css" type="text/css" media="screen, projection"/>
+    <!--[if IE]><link  href="css/ie.css" type="text/css" rel="stylesheet"/><![endif]-->
+    <style type="text/css">
 	.main {width: 70%;}
 	h1 {margin-top: 8px;}
 	h4 {margin-top: 8px;}
@@ -97,17 +99,14 @@ mysql_close();
 <body style="" onload="document.chatform.message.focus()">
 
 <div id="container" class="main">
-<div class="dl20"><a href="http://wikicha.com/chat"><h1>wiki<span class="beer">CHA</span>t</h1></a></div>
+<div class="dl20"><h1><a href="http://wikicha.com/chat">wiki<span class="beer">CHA</span>t</a></h1></div>
 <div class="dr20" style="text-align: right"><h4><span class="caramel">Tea</span> <span class="and">&amp;</span> <span class="caramel">Tomfoolery</span></h4></div>
 <br class="clear"/>
 
-<!--<div id="chatbox" style="border: solid 1px #999999; height: 70%; width: 50%; overflow: auto">-->
-
 <div id="fluid" class="fluid">
-  <form method=post name="chatform">
-  <span class="b">Message:</span> <input type="textbox" id="message" name="message"/><input type="submit" name="Post" value="Post">
+  <form action="/chat/index.php" method="post" id="chatform">
+  <p><span class="b">Message:</span> <input type="text" id="message" name="message"/><input type="submit" name="Post" value="Post"/></p>
   </form>
-  <br class="clear"/>
 
   <div id="chatbox" style="border: solid 1px #999999; height: 40em; overflow: auto;"></div>
 </div>
