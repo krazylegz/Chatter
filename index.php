@@ -55,7 +55,12 @@ print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
  	$(document).ready(function(){
 		$("div#chatbox").load("chatter.php", {time: new Date().getTime() });
 		$("div#userbox").load("users.php", {time: new Date().getTime() });
+		$("#message").focus();
+    $('input[@type=submit]').click(function() {
+      $("#message").focus();
+    });
 	});
+
 
 	var refreshId = setInterval(function()
 	{
@@ -96,7 +101,7 @@ mysql_close();
 
 ?>
 
-<body style="" onload="document.chatform.message.focus()">
+<body style="">
 
 <div id="container" class="main">
 <div class="dl20"><h1><a href="http://wikicha.com/chat">wiki<span class="beer">CHA</span>t</a></h1></div>
