@@ -104,7 +104,7 @@ mysql_close();
 <br class="clear"/>
 
 <div id="fluid" class="fluid">
-  <form action="/chat/index.php" method="post" id="chatform">
+  <form action="/chat/index.php" method="post" id="chatform" name="chatform">
   <p><span class="b">Message:</span> <input type="text" id="message" name="message"/><input type="submit" name="Post" value="Post"/></p>
   </form>
 
@@ -122,5 +122,10 @@ mysql_close();
 
 
 </div>
+
+<script type="javascript">
+ document.chatform.message.focus();
+</script>
+
 </body>
 </html>

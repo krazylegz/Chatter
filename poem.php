@@ -25,7 +25,7 @@ mysql_connect($dbhost, $dbuser, $dbpass);
 <div class="dl20"><a href="http://wikicha.com/chat"><h1>wiki<span class="beer">CHA</span>t <span class="water">Poems</span></h1></a></div>
 
 <?php
-$query = "SELECT * FROM `chat` where user not like 'wikiCHAt' and length(message) > 20 order by rand() limit 5";
+$query = "SELECT * FROM `chat` where user not like 'wikiCHAt' and length(message) > 20 AND message NOT LIKE \"%http:%\" order by rand() limit 5";
 $result = mysql_query($query);                                                                                     
                                                                                                                    
 mysql_close();                                                                                                     
