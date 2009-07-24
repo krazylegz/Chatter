@@ -56,9 +56,9 @@ print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 		$("div#chatbox").load("chatter.php", {time: new Date().getTime() });
 		$("div#userbox").load("users.php", {time: new Date().getTime() });
 		$("#message").focus();
-    $('input[@type=submit]').click(function() {
-      $("#message").focus();
-    });
+    		$('input[@type=submit]').click(function() {
+      			$("#message").focus();
+    		});
 	});
 
 
@@ -101,7 +101,7 @@ mysql_close();
 
 ?>
 
-<body style="">
+<body>
 
 <div id="container" class="main">
 <div class="dl20"><h1><a href="http://wikicha.com/chat">wiki<span class="beer">CHA</span>t</a></h1></div>
@@ -127,10 +127,6 @@ mysql_close();
 
 
 </div>
-
-<script type="javascript">
- document.chatform.message.focus();
-</script>
 
 </body>
 </html>
