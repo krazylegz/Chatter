@@ -31,7 +31,7 @@ while($i < $num) {
 	$timestamp = date( 'h:i', $timestamp );
 	$user=mysql_result($result,$i,"user");
 
-	if (preg_match("/^$user/", $message)) {
+	if (isset($_COOKIE['username']) && (strncasecmp($_COOKIE['username'], $message, strlen($_COOKIE['username'])) == 0)) {
 		$message = "<strong>$message</strong>";
 	}
 	if (preg_match("/^http/", $message)) {
@@ -40,9 +40,7 @@ while($i < $num) {
 	if (preg_match("/^\/me/", $message)) {
 		$message = preg_replace("/\/me/", "<strong>* $user</strong>", $message);
 	}
-	if (preg_match("/<img/", $message)) {
-		$message = preg_replace("/<img/", "[censored]", $message);
-	}
+
 	$avatar = "/home/brandon/public_html/teawiki/chat/avatars/" . $user . ".jpg";
 	if (!file_exists($avatar)) {
 		$avatar = "/chat/avatars/Zhen+Qu.jpg";
@@ -50,6 +48,7 @@ while($i < $num) {
 		$avatar = "/chat/avatars/" . $user . ".jpg";
 	}
 ?>
+
 <div id="message<?=$i?>" style="padding: .5em; background: #EEEEEE; margin-bottom: .2em; padding-bottom: .9em;">
   <img  style="border: solid 1px black; vertical-align: middle; float: left;" src="<?=$avatar?>" height=40 width=40>
   <span class="water oldbook" style="padding-left: .5em; font-size: .8em;"><?=$user?> - <?=$timestamp?></span><br/>

@@ -37,8 +37,7 @@ print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>wikiCHAt</title>
-	<meta http-equiv="refresh" content="600,URL=http://wikicha.com/chat/"/>
-
+    <meta http-equiv="refresh" content="600,URL=http://wikicha.com/chat/"/>
     <link href="/chat/css/reset.css" rel="stylesheet" type="text/css"/>
     <link  href="/chat/css/grid.css" rel="stylesheet" type="text/css"/>
     <link  href="/chat/css/type.css" rel="stylesheet"  type="text/css"/>
