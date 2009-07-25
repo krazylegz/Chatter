@@ -31,9 +31,12 @@ while($i < $num) {
 	$timestamp = date( 'h:i', $timestamp );
 	$user=mysql_result($result,$i,"user");
 
+	if (preg_match("/^$user/", $message)) {
+		$message = "<strong>$message</strong>";
+	}
 	if (preg_match("/^http/", $message)) {
 		$message = "<a target='_blank' href='" . $message . "'>$message</a>";
-	}
+	}	
 	if (preg_match("/^\/me/", $message)) {
 		$message = preg_replace("/\/me/", "<strong>* $user</strong>", $message);
 	}
