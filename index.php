@@ -29,7 +29,6 @@ if (strlen($_POST['username']) && !strlen($_COOKIE['username'])) {
 	$message = "New User: " . mysql_escape_string($_POST['username']);
 	$query = "INSERT INTO chat VALUES ('', \"wikiCHAt\", \"$message\", \"$date\", \"$ip\");";
 	$test = mysql_query($query);
-	echo "Username " . $_POST['username'];
 } 
 print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"); 
 ?>
