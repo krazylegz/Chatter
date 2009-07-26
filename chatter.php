@@ -1,5 +1,6 @@
 <?php
 require_once('config.inc.php');
+require_once('common.inc.php');
 session_start();
 
 mysql_connect($dbhost, $dbuser, $dbpass);
@@ -41,12 +42,7 @@ while($i < $num) {
 		$message = preg_replace("/\/me/", "<strong>* $user</strong>", $message);
 	}
 
-	$avatar = "/home/brandon/public_html/teawiki/chat/avatars/" . $user . ".jpg";
-	if (!file_exists($avatar)) {
-		$avatar = "/chat/avatars/Zhen+Qu.jpg";
-	} else {
-		$avatar = "/chat/avatars/" . $user . ".jpg";
-	}
+	$avatar = get_avatar($user);
 ?>
 
 <div id="message<?=$i?>" style="padding: .5em; background: #EEEEEE; margin-bottom: .2em; padding-bottom: .9em;">

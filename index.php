@@ -104,26 +104,32 @@ mysql_close();
 
 <body>
 
-<div id="container" class="main">
+<div id="container" class="main" style="width: 80%;">
+
 <div class="dl20"><h1><a href="http://wikicha.com/chat">wiki<span class="beer">CHA</span>t</a></h1></div>
-<div class="dr20" style="text-align: right"><h4><span class="caramel">Tea</span> <span class="and">&amp;</span> <span class="caramel">Tomfoolery</span></h4></div>
+<div class="dr20" style="text-align: right">
+  <h4><span class="caramel">Tea</span> <span class="and">&amp;</span> <span class="caramel">Tomfoolery</span></h4>
+</div>
 <br class="clear"/>
 
-<div id="fluid" class="fluid">
   <form action="/chat/index.php" method="post" id="chatform" name="chatform">
-  <p><span class="b">Message:</span> <input type="text" id="message" name="message"/><input type="submit" name="Post" value="Post"/></p>
+  <p>
+    <span class="b">Message:</span>
+    <input type="text" id="message" name="message"/>
+    <input type="submit" name="Post" value="Post"/>
+  </p>
   </form>
 
-  <div id="chatbox" style="border: solid 1px #999999; height: 40em; overflow: auto;"></div>
-</div>
+  <div id="chatbox" class="dl55" style="width: 80%; border: solid 1px #999999; height: 40em; overflow: auto;"></div>
+  <div id="userbox" class="dr15" style="width: 150px; vertical-align: top;" valign="top"></div>
 
-<br class="clear"/>
-<div id="userbox" class="dl120"></div>
-<br class="clear"/>
+<br clear="all"/>
+<br clear="all"/>
 <div id="links">
   <a href="http://wikicha.com" target="_blank">WikiCHA</a><br/>
   <a href="http://teadrunk.org" target="_blank">TeaDrunk Forum</a>
 </div>
+
 <br class="clear"/>
 
 
