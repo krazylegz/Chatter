@@ -49,7 +49,10 @@ print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 	h4 {margin-top: 8px;}
     </style>
 
-    <script type="text/javascript" src="jquery.js"></script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+	google.load("jquery", "1.3.2");
+    </script>
     <script type="text/javascript">
  	$(document).ready(function(){
 		$("div#chatbox").load("chatter.php", {time: new Date().getTime() });
