@@ -144,9 +144,8 @@ mysql_close();
   <div id="chatbox" class="dl55" style="width: 80%; border: solid 1px #999999; height: 40em; overflow: auto;"></div>
   <div id="userbox" class="dr15" style="width: 150px; vertical-align: top;" valign="top"></div>
 
-<br clear="all"/>
-<br clear="all"/>
-<div id="links">
+<div id="links" class="dr15" style="font-weight: bold; width: 150px; vertical-align: top; padding-top: 1em;">
+  <h3>Links:</h3>	
   <a href="http://wikicha.com" target="_blank">WikiCHA</a><br/>
   <a href="http://teadrunk.org" target="_blank">TeaDrunk Forum</a>
 </div>
