@@ -45,9 +45,9 @@ while($i < $num) {
 	$avatar = get_avatar($user);
 ?>
 
-<div id="message<?=$i?>" style="padding: .5em; background: #EEEEEE; margin-bottom: .2em; padding-bottom: .9em;">
-  <img  style="border: solid 1px black; vertical-align: middle; float: left;" src="<?=$avatar?>" height=40 width=40>
-  <span class="water oldbook" style="padding-left: .5em; font-size: .8em;"><?=$user?> - <?=$timestamp?></span><br/>
+<div id="message<?=$i?>" class="messagediv"> 
+  <img src="<?=$avatar?>"/>
+  <span class="water oldbook messagespan"><?=$user?> - <?=$timestamp?></span><br/>
   <span style="padding-left: .5em;"><?=$message?></span>
 </div>
 

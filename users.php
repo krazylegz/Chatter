@@ -22,7 +22,7 @@ while($i < $num) {
 	$avatar = get_avatar($user);
 	if ($_COOKIE['username'] == "brandon") {                                                                     
 ?>
-<img src="<?=$avatar?>" style="border: 1px solid black; margin-bottom: .3em; vertical-align: middle; "height=40px width=40px>
+<img src="<?=$avatar?>"/>
 <a href="http://www.maxmind.com/app/locate_ip?ips=<?=$ip?>"><?=$user?></a>&nbsp;
 <br style="clear"/>
 	<? } else { ?>

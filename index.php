@@ -24,7 +24,7 @@ if (strlen($_POST['username']) && !strlen($_COOKIE['username'])) {
 		die ("You're not Brandon!");
 	}
 	
-	setcookie("username", strip_tags(mysql_escape_string($_POST['username'])), time()+28800);
+	setcookie("username", strip_tags(mysql_escape_string($_POST['username'])), time()+604800);
 
 	$message = "New User: " . mysql_escape_string($_POST['username']);
 	$query = "INSERT INTO chat VALUES ('', \"wikiCHAt\", \"$message\", \"$date\", \"$ip\");";
@@ -46,6 +46,27 @@ print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 	.main {width: 70%;}
 	h1 {margin-top: 8px;}
 	h4 {margin-top: 8px;}
+	img {
+		border: 1px solid black;
+		vertical-align: middle;
+		height: 40px;
+		width: 40px;
+	}		
+	#userbox img {
+		margin-bottom: 0.3em;
+	}
+	#chatbox img {
+		float: left;
+	}
+	.messagediv {
+		padding: .5em; 
+		background: #EEEEEE; 
+		margin-bottom: .2em; 
+		padding-bottom: .9em;
+	}
+	.messagespan {
+		padding-left: .5em; font-size: .8em;
+	}
     </style>
 
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
